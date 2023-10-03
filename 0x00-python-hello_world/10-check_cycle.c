@@ -11,8 +11,10 @@ int check_cycle(listint_t *list)
 	if (!list)
 		return (0);
 
-	listint_t *slow = list, *fast = list;
+	listint_t *slow = NULL, *fast = NULL;
 
+	slow = list;
+	fast = list;
 	while (fast && fast->next)
 	{
 		slow = slow->next; /* Move slow pointer by one steps */
@@ -20,7 +22,5 @@ int check_cycle(listint_t *list)
 		if (slow == fast)
 			return (1);  /* Cycle detected */
 	}
-	free(slow);
-	free(fast);
 	return (0); /*No cycle found */
 }
