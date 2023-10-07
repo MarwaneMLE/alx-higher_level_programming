@@ -2,9 +2,8 @@
 def element_at(my_list, idx):
     """Function that retrieves an element from a list"""
     if idx < 0:
-       print("{}".format(None))
+        return None
     elif idx >= len(my_list):
-        print("{}".format(None))
+        return None
     else:
-        element = my_list[idx]
-        print("Element at index {:d} is {:d}".format(idx, element))
+        return my_list[idx]
