@@ -7,4 +7,4 @@ def element_at(my_list, idx):
         print("{}".format(None))
     else:
         element = my_list[idx]
-        print("Element at index {:d} is {}".format(idx, element))
+        print("Element at index {:d} is {:d}".format(idx, element))
