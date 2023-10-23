@@ -14,7 +14,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 # Catch a ZeroDivisionError if division by zero occurs.
                 result_list.append(0)
             except (TypeError, ValueError):
-                # Catch TypeError or ValueError if the elements cannot be divided
+                #Catch TypeError or ValueError if the elements can't be divided
                 print("wrong type")
                 result_list.append(0)
             except IndexError:
