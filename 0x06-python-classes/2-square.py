@@ -20,4 +20,4 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def square(self):
-        return self.size ** 2 
+        return self.size ** 2
