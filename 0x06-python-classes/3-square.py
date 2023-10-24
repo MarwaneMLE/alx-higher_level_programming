@@ -3,9 +3,10 @@
 
 
 class Square:
-    """ Class to count square of given number
+    """
+    Class that defines properties of square by: (based on 2-square.py).
 
-    Attributei:
+    Attributes:
         size: size of a square (1 side).
     """
     def __init__(self, size=0):
@@ -16,12 +17,10 @@ class Square:
         """
         self.__size = size
 
-        if not isinstance(size,int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
-
         else:
             self.__size = size
 
