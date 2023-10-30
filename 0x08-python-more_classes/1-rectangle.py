@@ -10,12 +10,12 @@ class Rectangle:
     """  class Rectangle that defines a rectangle form"""
 
     def __init__(self, width=0, height=0):
-        """Initializes the data."""
+        """Initializes the data"""
         self.width = width
         self.height = height
 
     
-    @proprety
+    @property
     def width(self):
         return self.__width
 
