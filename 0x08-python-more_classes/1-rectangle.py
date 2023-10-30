@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-""" Module for Rectangle class """
+"""
+The "Rectangle" module 
+
+This module provides a Rectangle class with two attribute width and height.
+The default values of attributes are 0.
+"""
 
 class Rectangle:
     """  class Rectangle that defines a rectangle form"""
@@ -9,7 +14,13 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    
+    @proprety
+    def width(self):
+        return self.__width
 
+    
+    @width.setter
     def width(self, value):
         """
         Function that retrieve width
@@ -21,9 +32,15 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        return value
+        return self.__width = value
 
+    
+    @property
+    def height(self):
+        return self.__height
 
+    
+    @height.setter
     def height(self, value):
         """
         Function that retrieve the height
@@ -35,4 +52,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        return value
+        return self.__height = value
