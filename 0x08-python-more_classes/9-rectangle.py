@@ -1,5 +1,5 @@
 class Rectangle:
-    """A class for rectangles with width, height, and various methods."""
+    """A class representing rectangles with width, height, and various methods."""
 
     number_of_instances = 0  # Count of instances
     print_symbol = "#"  # Symbol for printing
@@ -56,12 +56,10 @@ class Rectangle:
 
     def __str__(self):
         """Generate a string representation of the rectangle using print_symbol."""
-        return "\n".join([str(self.print_symbol * self.__width)\n
-            for _ in range(self.__height)]
+        return "\n".join([str(self.print_symbol * self.__width) for _ in range(self.__height)]
 
     def __del__(self):
-        """Print a custom message when an instance is deleted\n
-        and decrement the instance count."""
+        """Print a custom message when an instance is deleted and decrement the instance count."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -71,6 +69,5 @@ class Rectangle:
 
     def perimeter(self):
         """Calculate and return the perimeter of the rectangle."""
-        return 0 if self.__width == 0 or self.__height == 0 \n
-                else 2 * (self.__width + self.__height)
+        return 0 if self.__width == 0 or self.__height == 0 else 2 * (self.__width + self.__height)
 
