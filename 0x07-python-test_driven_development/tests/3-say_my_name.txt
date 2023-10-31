@@ -17,6 +17,10 @@ Test both names empty:
 >>> say_my_name("", "")
 My name is  
 
+Test just spaces:
+>>> say_my_name("   ", "   ")
+My name is        
+
 Test empty firstname:
 >>> say_my_name("", "Kamel")
 My name is  Kamel
