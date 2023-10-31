@@ -1,19 +1,25 @@
+#!/usr/bin/python3
+"""
+This is the "Rectangle"  module.
+
+This module provides a Rectangle class.
+"""
+
+
 class Rectangle:
-    """A Rectangle class with attributes width and height, and methods area, perimeter, print, str, repr, and del."""
-    
+    """A Rectangle class with attributes width and height, and
+    methods area, perimeter, print, str, repr, and del.
+    """
     def __init__(self, width=0, height=0):
-        # Constructor to initialize the width and height attributes
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        # Getter for the width attribute
         return self.__width
 
     @width.setter
     def width(self, value):
-        # Setter for the width attribute with type and value checks
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -22,12 +28,10 @@ class Rectangle:
 
     @property
     def height(self):
-        # Getter for the height attribute
         return self.__height
 
     @height.setter
     def height(self, value):
-        # Setter for the height attribute with type and value checks
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -35,11 +39,9 @@ class Rectangle:
         self.__height = value
 
     def __repr__(self):
-        # Return a string representation for recreating an instance
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __str__(self):
-        # Generate a string representation of the rectangle
         total = ""
         for i in range(self.__height):
             total += ("#" * self.__width)
@@ -48,15 +50,12 @@ class Rectangle:
         return total
 
     def __del__(self):
-        # Custom message when an instance is deleted
         print("Bye rectangle...")
 
     def area(self):
-        # Calculate and return the area of the rectangle
         return self.__width * self.__height
 
     def perimeter(self):
-        # Calculate and return the perimeter of the rectangle
         if self.__width is 0 or self.__height is 0:
             return 0
         return (2 * self.__width) + (2 * self.__height)
