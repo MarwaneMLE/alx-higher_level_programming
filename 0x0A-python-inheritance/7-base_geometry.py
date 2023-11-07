@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""BaseGeometry class Module"""
 
 class BaseGeometry:
     """BaseGeometry class"""
@@ -24,4 +25,3 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-
