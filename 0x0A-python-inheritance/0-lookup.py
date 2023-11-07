@@ -10,9 +10,5 @@ def lookup(obj):
         obj: input object
 
     Return: list of object
-    """
-    
-    # To obtain a list of attributes and methods
-    attributes_methods = dir(obj)
-
-    return attributes_methods
+    """    
+    return dir(obj)
