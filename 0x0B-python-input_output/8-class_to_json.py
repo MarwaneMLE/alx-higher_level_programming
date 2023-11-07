@@ -7,5 +7,5 @@ def class_to_json(obj):
     dic = {}
 
     if hasattr(obj, "__dict__"):
-        dit = obj.__dict__.copy()
+        dic = obj.__dict__.copy()
     return dic
