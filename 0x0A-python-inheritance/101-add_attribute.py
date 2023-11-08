@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-
-class MyClass:
-    pass
+"""Module containing add_attribute method"""
 
 
 def add_attribute(obj, attribute_name, attribute_value):
@@ -15,6 +12,7 @@ def add_attribute(obj, attribute_name, attribute_value):
     Raises:
         TypeError: If the object cannot have a new attribute.
     """
-    if not hasattr(obj, '__dict__'):
+    if hasattr(obj, "__dict__") or (hasattr(obj, "__slots__") and name in obj.__slots__):
+        setattr(obj, attribute_name, attribute_value)
+    else:
         raise TypeError("can't add new attribute")
-    obj.__dict__[attribute_name] = attribute_value
