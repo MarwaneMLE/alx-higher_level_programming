@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" Module that contains class Square,
-inheritance of class Rectangle
-"""
+""" Module that contains class Square, inheritance of class Rectangle """
 from models.rectangle import Rectangle
 
 
@@ -19,19 +17,19 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """ Getter size """
+        """ Getter for size """
         return self.width
 
     @size.setter
     def size(self, value):
-        """ Setter size """
+        """ Setter for size """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """ update method """
-        if args:
-            list_atr = ['id', 'size', 'x', 'y']
+        """ Update method """
+        list_atr = ['id', 'size', 'x', 'y']
+        if args and len(args) != 0:
             for i, value in enumerate(args):
                 if list_atr[i] == 'size':
                     setattr(self, 'width', value)
@@ -58,5 +56,4 @@ class Square(Rectangle):
                 dict_res[key] = getattr(self, key)
 
         return dict_res
-
 
