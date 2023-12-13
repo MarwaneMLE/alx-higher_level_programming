@@ -1,5 +1,4 @@
 -- uses the hbtn_0d_tvshows database to list all genres not linked to the show Dexter
-USE hbtn_0d_tvshows;
 CREATE TABLE IF NOT EXISTS dexter_genres
 AS (
 SELECT tv_genres.id, tv_genres.name
